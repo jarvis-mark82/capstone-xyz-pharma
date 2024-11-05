@@ -14,12 +14,12 @@ Make sure you have Node.js and npm installed. You can download them from Node.js
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone git@github.com:jarvis-mark82/capstone-xyz-pharma.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd your-repo-name
+    cd capstone-xyz-pharma
     ```
 
 3. Install the dependencies:
