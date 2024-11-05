@@ -43,14 +43,12 @@ const Products = () => {
             {/* Search Products */}
             <div className='d-flex justify-content-center gap-3 mb-4'>
                 <input type="text" placeholder='Generic/Trade Name' className='form-control' value={searchItem} onChange={(e) =>setSearchItem(e.target.value)}/>
-                <input type="submit" value="Search" className='btn btn-primary' onClick={handleSearch}/>
+                <input type="submit" value="Search" className='btn btn-primary' onClick={handleSearch} disabled={searchItem === ""}/>
             </div>
-
-            <div className='text-center'> { message && <span className='text-danger'> {message}</span>}</div>
-
+            
             {/* Products */}
             <div className='row g-4'>
-                {products.length > 0 && products.map((product, index) => (
+                {products.length > 0 ?  products.map((product, index) => (
                     <div key={index} className='col-md-6'>
                         <div className='card h-100'>
                             <div className='row g-0'>
@@ -69,7 +67,7 @@ const Products = () => {
                             </div>
                         </div>
                     </div>
-                ))}
+                )): <div> No Products found</div>}
             </div>
         </div>
     );
